@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* background: linear-gradient(45deg, #fff, rgb(131, 131, 131)); */
+  background: radial-gradient(#fff, rgb(94, 94, 94));
+}
+.phonecontainer {
+  width: 270px;
+  height: 550px;
+  margin: auto;
+  position: relative;
+}
+.phonecontainer .inner_container {
+  width: 90%;
+  height: 90%;
+  /* background: rgb(243, 243, 243); */
+  background: linear-gradient(45deg, rgb(46, 161, 206), #7adf8a);
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  border-radius: 40px;
+}
+.phonecontainer .inner_container .toolbar {
+  width: 100%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  padding: 0px 25px;
+  font-weight: 300;
+}
+.phonecontainer .inner_container .searchbar {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0px 25px;
+}
+.phonecontainer .inner_container .searchbar i {
+  margin: 5px;
+}
+.phonecontainer .inner_container .searchbar .logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #2029aa;
+}
+.phonecontainer .inner_container .searchbar .logo i {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.phonecontainer .inner_container .musiccontainer {
+  width: 100%;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.phonecontainer .inner_container.center .musiccontainer,
+.phonecontainer .inner_container.right .musiccontainer {
+  height: 60px;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+.phonecontainer .inner_container .musiccontainer .musicimage {
+  width: 100%;
+  height: 60%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.phonecontainer .inner_container .musiccontainer .musicimage .imagehoder {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-image: url(../images/seeyouagain.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.phonecontainer
+  .inner_container
+  .musiccontainer
+  .musicimage
+  .imagehoder::before {
+  border-radius: 50%;
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  bottom: -3px;
+  right: -3px;
+  background: linear-gradient(45deg, red, blue);
+  z-index: -1;
+}
+.phonecontainer .inner_container .musiccontainer .musicname {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.phonecontainer .inner_container .musiccontainer .slidebar {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.phonecontainer .inner_container .musiccontainer .slidebar .starttime,
+.phonecontainer .inner_container .musiccontainer .slidebar .endtime {
+  width: 10%;
+  font-size: 10px;
+}
+.phonecontainer .inner_container .musiccontainer .slidebar .bar {
+  width: 90%;
+  position: relative;
+}
+.phonecontainer .inner_container .musiccontainer .slidebar .bar .gray {
+  width: 90%;
+  height: 2px;
+  background: lightgray;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.phonecontainer .inner_container .musiccontainer .slidebar .bar .color {
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(to right, red, blue);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(0%, -50%);
+}
+.phonecontainer .inner_container .musiccontainer .slidebar .bar .dot {
+  width: 7px;
+  height: 7px;
+  background: rgb(19, 19, 245);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 63%;
+  transform: translate(0%, -50%);
+}
+.phonecontainer .inner_container .controlpanel {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5px;
+}
+.phonecontainer .inner_container.left .controlpanel {
+  height: 80px;
+}
+.phonecontainer .inner_container.center .controlpanel,
+.phonecontainer .inner_container.right .controlpanel {
+  height: 350px;
+}
+.phonecontainer .inner_container .controlpanel .justsmallline {
+  display: inline-block;
+  width: 30px;
+  height: 3px;
+  border-radius: 30px;
+  background: lightgray;
+}
+.phonecontainer .inner_container .controlpanel .controls {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.phonecontainer .inner_container .controlpanel .controls span {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 12px;
+}
+.phonecontainer .inner_container .controlpanel .controls span:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  /* background: rgb(170, 170, 170); */
+  background: linear-gradient(45deg, rgb(46, 161, 206), #7adf8a);
+}
+
+.phonecontainer .inner_container.center .controlpanel .playlist {
+  width: 100%;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.phonecontainer .inner_container.center .controlpanel .playlist .row {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.phonecontainer .inner_container.center .controlpanel .playlist .row .image {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 1px solid blue;
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .image.seeyouagain {
+  background-image: url(../images/seeyouagain.jpg);
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .image.memories {
+  background-image: url(../images/memories.jpg);
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .image.girlslikeyou {
+  background-image: url(../images/girlslikeyou.jpg);
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .image.heartattack {
+  background-image: url(../images/heartattack.jpg);
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .image.attention {
+  background-image: url(../images/attention.jpg);
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .threedots {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phonecontainer .inner_container.center .controlpanel .playlist .row .details {
+  width: 100px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 10px;
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .details
+  p {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+.phonecontainer
+  .inner_container.center
+  .controlpanel
+  .playlist
+  .row
+  .details
+  small {
+  font-size: 8px;
+  margin: 0;
+  padding: 0;
+}
+.phonecontainer .inner_container.center .controlpanel .playlist .sidetext {
+  width: 100%;
+  font-size: 12px;
+}
+
+.phonecontainer .inner_container.right .controlpanel .equaliser {
+  width: 100%;
+  height: 320px;
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.phonecontainer .inner_container.right .controlpanel .equaliser .title {
+  font-weight: bold;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.phonecontainer .inner_container.right .controlpanel .equaliser .title i {
+  color: skyblue;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer {
+  width: 100%;
+  /* background: green; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 15px;
+  position: relative;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(to right, #fff, #fff, transparent);
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(to left, #fff, #fff, transparent);
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer
+  .presetcontainertitle {
+  width: 100%;
+  text-align: center;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer
+  .presetcontainertitle
+  p {
+  font-weight: bold;
+  font-size: 12px;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer
+  .presets {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer
+  .presets
+  span {
+  font-size: 10px;
+  margin: 0 5px;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontainer
+  .presets
+  span.active {
+  font-size: 15px;
+  font-weight: bold;
+  background: -webkit-linear-gradient(45deg, red, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 8px;
+  padding: 10px;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .threepoints {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+  padding-bottom: 10px;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder
+  .bar_bottom {
+  width: 3px;
+  height: 100%;
+  background: rgb(233, 233, 233);
+  border-radius: 20px;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder
+  .bar_active {
+  width: 3px;
+  background: linear-gradient(to top, red, blue);
+  border-radius: 20px;
+  position: relative;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(1)
+  .bar_active {
+  height: 80%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(2)
+  .bar_active {
+  height: 60%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(3)
+  .bar_active {
+  height: 40%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(4)
+  .bar_active {
+  height: 20%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(5)
+  .bar_active {
+  height: 40%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(6)
+  .bar_active {
+  height: 60%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(7)
+  .bar_active {
+  height: 100%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(8)
+  .bar_active {
+  height: 120%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(9)
+  .bar_active {
+  height: 80%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder:nth-child(10)
+  .bar_active {
+  height: 60%;
+}
+.phonecontainer
+  .inner_container.right
+  .controlpanel
+  .equaliser
+  .presetcontrolls
+  .barholder
+  .bar_active:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 5px;
+  background: rgb(7, 7, 238);
+  left: -3px;
+}
+.phonecontainer .mobile_outter {
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/iphone.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
